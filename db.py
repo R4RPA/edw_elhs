@@ -1,12 +1,13 @@
 from sqlalchemy import create_engine, text
 from sqlalchemy.exc import SQLAlchemyError
-import env_params as env  # Importing environment variables for connection strings
+import env_params as env
 import pandas as pd
-
+import pyodbc
 
 class EdwDb:
     def __init__(self):
-        db_url = env.edw_db_url  # Using MS SQL Server connection string from environment
+        db_url = env.edw_db_url
+        print('db_url', db_url)
         try:
             self.engine = create_engine(db_url, echo=False)
             print("Connection to EDW database established successfully.")
@@ -47,7 +48,8 @@ class EdwDb:
 
 class ElhsDb:
     def __init__(self):
-        db_url = env.elhs_db_url  # Using MS SQL Server connection string from environment
+        db_url = env.elhs_db_url
+        print('db_url', db_url)
         try:
             self.engine = create_engine(db_url, echo=False)
             print("Connection to ELHS database established successfully.")

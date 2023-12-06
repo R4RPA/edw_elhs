@@ -1,0 +1,1 @@
+select max(AppointmentDTS) as MaxDate, min(AppointmentDTS) as MinDate from demographics

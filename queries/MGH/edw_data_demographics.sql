@@ -1,0 +1,1 @@
+SELECT * FROM demographics where AppointmentDTS between '{dynamic_start_date}' and '{dynamic_end_date}'

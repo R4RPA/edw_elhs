@@ -1,0 +1,1 @@
+SELECT max(CurrentValueDTS) as MaxDate, min(CurrentValueDTS) as MinDate FROM smartform

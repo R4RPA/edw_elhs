@@ -1,11 +1,10 @@
-import os
-
 # ========================================================================
 # Variable values ==> change these values everytime scipt is executed
 # Foramt YYYY-MM-DD <<== input to query edw
+min_query_date = "2019-01-01"
 start_date = "2019-01-01"
-end_date = "2023-12-31"
-batch_size = '1 month'
+end_date = "2019-01-31"
+batch_size = '1 week'
 
 
 # refered in merge_proms_demographics
@@ -39,11 +38,8 @@ file_date_format = "%Y%b%d"
 # database credentails to connect to edw
 mgb_user='jyr47'
 mgb_pswd ='Hifiwifi@01'
-edw_db_url = f"mssql+pyodbc://PARTNERS\\{mgb_user}:{mgb_pswd}@phsedw.partners.org:1433?driver=FreeTDS"
-elhs_db_url = f"mssql+pyodbc://PARTNERS\\{mgb_user}:{mgb_pswd}@phsedw.partners.org:1433?driver=FreeTDS"
-
-#elhs_db_url = f"sqlite:///{os.path.join('db', 'elhs.db')}"
-#edw_db_url = f"sqlite:///{os.path.join('db', 'elhs.db')}"
+edw_db_url = f"mssql+pyodbc://PARTNERS\\{mgb_user}:{mgb_pswd}@phsedw.partners.org:1433/Epic?driver=FreeTDS"
+elhs_db_url = f"mssql+pyodbc://PARTNERS\\{mgb_user}:{mgb_pswd}@PHSSQL2026.partners.org:1433/elhsdcc?driver=FreeTDS"
 
 import pandas as pd
 start_date = pd.to_datetime(start_date)

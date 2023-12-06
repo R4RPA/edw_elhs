@@ -1,0 +1,1 @@
+select * from medications where PatientID in ({dynamic_patient_ids})

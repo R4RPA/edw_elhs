@@ -1,16 +1,16 @@
-from DatabaseConnections import EdwDb, ElhsDb
+from db import EdwDb, ElhsDb
 
 # Initialize database connections
 edw_db = EdwDb()
 elhs_db = ElhsDb()
 
-# Function to test basic queries
+
 def test_basic_query(db, db_name):
+    """Function to test basic queries"""
     if db.engine:
         print(f"Testing basic query on {db_name} database.")
 
         # Example query: Select version or equivalent information
-        # This query should be modified based on the actual database and its schema
         query = "SELECT @@VERSION;" if 'mssql' in db.engine.url.drivername else "SELECT sqlite_version();"
 
         # Test fetching data as a DataFrame

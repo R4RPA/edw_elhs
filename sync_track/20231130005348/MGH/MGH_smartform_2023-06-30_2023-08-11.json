@@ -1,0 +1,12 @@
+{
+    "smartform": {
+        "2023-06-30_2023-07-29": {
+            "source_fetch_status": "OPEN",
+            "destination_push_status": "OPEN"
+        },
+        "2023-07-30_2023-08-11": {
+            "source_fetch_status": "OPEN",
+            "destination_push_status": "OPEN"
+        }
+    }
+}

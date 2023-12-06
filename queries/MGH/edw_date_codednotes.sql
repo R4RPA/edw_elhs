@@ -1,0 +1,1 @@
+SELECT max(AppointmentDTS) as MaxDate, min(AppointmentDTS) as MinDate FROM codednotes
